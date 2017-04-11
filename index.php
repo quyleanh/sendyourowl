@@ -11,7 +11,7 @@
 
 	$image->setFont('HONEY-CREAM.TTF');
 	$image->setTextColor(array(0, 0, 0));
-	$image->textBox("Gửi Blien, \n Đây là bức thư được làm theo kiểu ịn text vào ảnh, cậu có thể gõ bất kỳ thứ gì vào đây :D \n Quy Le Anh", array(
+	$image->textBox("Gửi Blien, \n Đây là bức thư fasdfađược làm theo kiểu ịn text vào ảnhfasdfa, cậu có thể gõ bất kỳ thứ gì vào đây dfasdfasdfasdfasdfasdfasd:D \n Quy Le Anh \n Quy Le Anh", array(
 		'width' => 630,
 		'height' => 470,
 		'fontSize' => 40, // Desired starting font size

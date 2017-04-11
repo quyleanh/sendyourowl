@@ -547,6 +547,7 @@ class PHPImage {
 		return $this;
 	}
 	
+
 	/**
 	 * Shows the resulting image and cleans up.
 	 */
@@ -557,8 +558,11 @@ class PHPImage {
 				imagegif($this->img, null);
 				break;
 			case IMAGETYPE_PNG:
-				header('Content-type: image/png');
-				imagepng($this->img, null, $this->quality);
+				//header('Content-type: image/png');
+				//imagepng($this->img, null, $this->quality);
+				$save = 'saved.png';
+				chmod($save,0755);
+				imagepng($this->img,$save,0,NULL);
 				break;
 			default:
 				header('Content-type: image/jpeg');
