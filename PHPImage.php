@@ -304,20 +304,20 @@ class PHPImage {
 				switch(true){
 					case stripos($contenttype, 'jpeg') !== false:
 					case stripos($contenttype, 'jpg') !== false:
-						$img = imagecreatefromjpeg($file);
-						$type = IMAGETYPE_JPEG;
-						break;
+					$img = imagecreatefromjpeg($file);
+					$type = IMAGETYPE_JPEG;
+					break;
 					case stripos($contenttype, 'png') !== false:
-						$img = imagecreatefrompng($file);
-						$type = IMAGETYPE_PNG;
-						break;
+					$img = imagecreatefrompng($file);
+					$type = IMAGETYPE_PNG;
+					break;
 					case stripos($contenttype, 'gif') !== false:
-						$img = imagecreatefromgif($file);
-						$type = IMAGETYPE_GIF;
-						break;
+					$img = imagecreatefromgif($file);
+					$type = IMAGETYPE_GIF;
+					break;
 					default:
-						return false;
-						break;
+					return false;
+					break;
 				}
 				$width = imagesx($img);
 				$height = imagesy($img);
@@ -331,23 +331,23 @@ class PHPImage {
 			list($width, $height, $type) = getimagesize($file);
 			switch($type){
 				case IMAGETYPE_GIF:
-					if ($returnResource) {
-						$img = imagecreatefromgif($file);
-					}
-					break;
+				if ($returnResource) {
+					$img = imagecreatefromgif($file);
+				}
+				break;
 				case IMAGETYPE_JPEG:
-					if ($returnResource) {
-						$img = imagecreatefromjpeg($file);
-					}
-					break;
+				if ($returnResource) {
+					$img = imagecreatefromjpeg($file);
+				}
+				break;
 				case IMAGETYPE_PNG:
-					if ($returnResource) {
-						$img = imagecreatefrompng($file);
-					}
-					break;
+				if ($returnResource) {
+					$img = imagecreatefrompng($file);
+				}
+				break;
 				default:
-					return false;
-					break;
+				return false;
+				break;
 			}
 		} else {
 			return false;
@@ -481,15 +481,15 @@ class PHPImage {
 				$newwidth = $targetWidth;
 				switch($crop){
 					case 'T':
-						$y = 0;
-						break;
+					$y = 0;
+					break;
 					case 'B':
-						$y = intval(($newheight - $targetHeight) * ($height / $newheight));
-						break;
+					$y = intval(($newheight - $targetHeight) * ($height / $newheight));
+					break;
 					case 'C':
 					default:
-						$y = intval((($newheight - $targetHeight) / 2) * ($height / $newheight));
-						break;
+					$y = intval((($newheight - $targetHeight) / 2) * ($height / $newheight));
+					break;
 				}
 			} else {
 				// crop sides
@@ -497,15 +497,15 @@ class PHPImage {
 				$newheight = $targetHeight;
 				switch($crop){
 					case 'L':
-						$x = 0;
-						break;
+					$x = 0;
+					break;
 					case 'R':
-						$x = intval(($newwidth - $targetWidth) * ($width / $newwidth));
-						break;
+					$x = intval(($newwidth - $targetWidth) * ($width / $newwidth));
+					break;
 					case 'C':
 					default:
-						$x = intval((($newwidth - $targetWidth) / 2) * ($width / $newwidth));
-						break;
+					$x = intval((($newwidth - $targetWidth) / 2) * ($width / $newwidth));
+					break;
 				}
 			}
 			if($upscale === false){
@@ -546,7 +546,6 @@ class PHPImage {
 		$this->afterUpdate();
 		return $this;
 	}
-	
 
 	/**
 	 * Shows the resulting image and cleans up.
@@ -554,20 +553,19 @@ class PHPImage {
 	public function show(){
 		switch($this->type){
 			case IMAGETYPE_GIF:
-				header('Content-type: image/gif');
-				imagegif($this->img, null);
-				break;
+			header('Content-type: image/gif');
+			imagegif($this->img, null);
+			break;
 			case IMAGETYPE_PNG:
-				//header('Content-type: image/png');
-				//imagepng($this->img, null, $this->quality);
-				$save = 'saved.png';
-				chmod($save,0755);
-				imagepng($this->img,$save,0,NULL);
-				break;
+			header('Content-type: image/png');
+			imagepng($this->img, null, $this->quality);
+				// chmod($save,0755);
+				// imagepng($this->img,$save,0,NULL);
+			break;
 			default:
-				header('Content-type: image/jpeg');
-				imagejpeg($this->img, null, $this->quality);
-				break;
+			header('Content-type: image/jpeg');
+			imagejpeg($this->img, null, $this->quality);
+			break;
 		}
 		$this->cleanup();
 	}
@@ -596,14 +594,14 @@ class PHPImage {
 		if (is_writable(dirname($path))) {
 			switch($this->type){
 				case IMAGETYPE_GIF:
-					imagegif($this->img, $path);
-					break;
+				imagegif($this->img, $path);
+				break;
 				case IMAGETYPE_PNG:
-					imagepng($this->img, $path, $this->quality);
-					break;
+				imagepng($this->img, $path, $this->quality);
+				break;
 				default:
-					imagejpeg($this->img, $path, $this->quality);
-					break;
+				imagejpeg($this->img, $path, $this->quality);
+				break;
 			}
 		} else {
 			$this->handleError(dirname($path) . ' is not writable!');
@@ -734,7 +732,7 @@ class PHPImage {
 	 * @see http://www.php.net/manual/en/function.imagefilledellipse.php
 	 * @return $this
 	 */
-	public function circle($x=0, $y=0, $width=100, $colour=array(0, 0, 0), $opacity=1.0, $outline=false){
+	public function circleDraw($x=0, $y=0, $width=100, $colour=array(0, 0, 0), $opacity=1.0, $outline=false){
 		return $this->ellipse($x, $y, $width, $width, $colour, $opacity, $outline);
 	}
 
@@ -812,25 +810,25 @@ class PHPImage {
 			// If word passed, convert it to percentage
 			switch($x){
 				case 'left':
-					$x = '0%';
-					break;
+				$x = '0%';
+				break;
 				case 'center':
-					$x = '50%';
-					break;
+				$x = '50%';
+				break;
 				case 'right':
-					$x = '100%';
-					break;
+				$x = '100%';
+				break;
 			}
 			switch($y){
 				case 'top':
-					$y = '0%';
-					break;
+				$y = '0%';
+				break;
 				case 'center':
-					$y = '50%';
-					break;
+				$y = '50%';
+				break;
 				case 'bottom':
-					$y = '100%';
-					break;
+				$y = '100%';
+				break;
 			}
 			// Work out offset
 			if(strpos($x, '%') > -1){
@@ -853,7 +851,7 @@ class PHPImage {
 				$height,
 				$width,
 				$height
-			);
+				);
 			imagedestroy($image);
 			$this->afterUpdate();
 			return $this;
@@ -905,7 +903,7 @@ class PHPImage {
 			'fontFile' => $this->fontFile,
 			'autoFit' => true,
 			'debug' => false
-		);
+			);
 		extract(array_merge($defaults, $options), EXTR_OVERWRITE);
 		if($fontFile === null){
 			$this->handleError('No font file set!');
@@ -932,19 +930,19 @@ class PHPImage {
 			}
 			switch($alignHorizontal){
 				case 'center':
-					$offsetx += (($width - $actualWidth) / 2);
-					break;
+				$offsetx += (($width - $actualWidth) / 2);
+				break;
 				case 'right':
-					$offsetx += ($width - $actualWidth);
-					break;
+				$offsetx += ($width - $actualWidth);
+				break;
 			}
 			switch($alignVertical){
 				case 'center':
-					$offsety += (($height - $actualHeight) / 2);
-					break;
+				$offsety += (($height - $actualHeight) / 2);
+				break;
 				case 'bottom':
-					$offsety += ($height - $actualHeight);
-					break;
+				$offsety += ($height - $actualHeight);
+				break;
 			}
 		}
 		// Draw stroke
@@ -1030,7 +1028,7 @@ class PHPImage {
 			'strokeWidth' => $this->strokeWidth,
 			'strokeColor' => $this->strokeColor,
 			'fontFile' => $this->fontFile
-		);
+			);
 		extract(array_merge($defaults, $options), EXTR_OVERWRITE);
 		if ($height) {
 			$fontSize = $this->fitTobounds($fontSize, $angle, $fontFile, $text, $width, $height);
@@ -1074,10 +1072,10 @@ class PHPImage {
 	public function checkQuality(){
 		switch($this->type){
 			case IMAGETYPE_PNG:
-				if($this->type > 9){
-					$this->quality = 3;
-				}
-				break;
+			if($this->type > 9){
+				$this->quality = 3;
+			}
+			break;
 		}
 		return $this;
 	}
@@ -1213,14 +1211,14 @@ class PHPImage {
 	public function setOutput($type, $quality = null){
 		switch(strtolower($type)){
 			case 'gif':
-				$this->type = IMAGETYPE_GIF;
-				break;
+			$this->type = IMAGETYPE_GIF;
+			break;
 			case 'jpg':
-				$this->type = IMAGETYPE_JPEG;
-				break;
+			$this->type = IMAGETYPE_JPEG;
+			break;
 			case 'png':
-				$this->type = IMAGETYPE_PNG;
-				break;
+			$this->type = IMAGETYPE_PNG;
+			break;
 		}
 		if($quality !== null){
 			$this->setQuality($quality);

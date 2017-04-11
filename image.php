@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Your owl is here...</title>
-  <style>
-    .image {
-        max-width: 99%;
-    	max-height: 99%;
-    }
-    .fill {
-	    position: fixed;
-	    left: 0;
-	    right: 0;
-	    top: 0;
-	    bottom: 0;
-	    text-align: center;
-    }
-  </style>
+	<title>Your owl is here...</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<style>
+		
+	</style>
 </head>
 <body>
 	<?php
-	//Set the Content Type
+	date_default_timezone_set("Asia/Ho_Chi_Minh");
+	function generateRandomString($length = 10) {
+		return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
+	}
+	
 	include 'PHPImage.php';
 
 	$textLetter = $_POST["yourowl"];
+
+	$datetime = new DateTime();
+	$result = $datetime->format('Y-m-d H:i:s');
+	$result = str_replace(":", "", $result);
+	$result = str_replace(" ", "_", $result);
+	$path = "owls/" . generateRandomString(4) . "_" . $result . ".png";
 
 	$bg = 'errol.png';
 	$image = new PHPImage();
@@ -37,11 +37,11 @@
 		'fontSize' => 40, // Desired starting font size
 		'x' => 200,
 		'y' => 420
-	));
-	$image->show();
+		));
+	$image->save($path, false, true);
 	?>
 	<div class="fill">
-		<img class="image" src="saved.png" />		
+		<img class="image" src="<?php echo $path?>" />		
 	</div>
 </body>
 </html>
