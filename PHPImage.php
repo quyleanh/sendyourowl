@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /**
  * Wrapper for PHP's GD Library for easy image manipulation to resize, crop
