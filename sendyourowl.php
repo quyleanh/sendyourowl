@@ -15,73 +15,74 @@
 	<style>
 		body {
 			width: 100%;
-			height:100%;
+			height:90%;
 
 		}
 	</style>
 </head>
 <body>
+<div style="width: 77%; margin: auto;" class="container-fluid">
+		<div class="bg-3 text-center">
+			<h3><b>Học Viện Ma Thuật và Pháp Thuật Hogwarts Việt Nam</b></h3>
+			<img src="logo.png" class="img-circle" width="30%" height="30%" alt="Bird">
+			<h3>#sendyourowl</h3>
+		</div>
 
-	<div class="container-fluid bg-3 text-center">
-		<h3><b>Học Viện Ma Thuật và Pháp Thuật Hogwarts Việt Nam</b></h3>
-		<img src="logo.png" class="img-circle" width="30%" height="30%" alt="Bird">
-		<h3>#sendyourowl</h3>
+		<form action="image.php" method="post" role="form">
+			<div class="form-group">
+				<label for="name" class="col-sm-2 control-label">Enter your owl:</label>
+				<div class="col-sm-10">
+					<textarea class="form-control" name="yourowl" rows="5" placeholder="Your letter should be in 200 words"></textarea><br />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="name" class="col-sm-2 control-label">Choose your owl:</label>
+				<div class="col-sm-10">
+					<label>
+						<input type="radio" name="optionsOwls" id="optionsRadios1" value="option1" checked>
+						Hedwig
+					</label><br>
+					<label>
+						<input type="radio" name="optionsOwls" id="optionsRadios2" value="option2">
+						Pigwidgeon
+					</label><br>
+					<label>
+						<input type="radio" name="optionsOwls" id="optionsRadios2" value="option3">
+						Hermes
+					</label><br>
+					<label>
+						<input type="radio" name="optionsOwls" id="optionsRadios2" value="option4">
+						Errol
+					</label><br><br>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="name" class="col-sm-2 control-label">Choose your background:</label>
+				<div class="col-sm-10">
+					<label>
+						<input type="radio" name="optionsBackgrounds" id="optionsRadios1" value="option1" checked>
+						Background 1
+					</label><br>
+					<label>
+						<input type="radio" name="optionsBackgrounds" id="optionsRadios2" value="option2">
+						Background 2
+					</label><br>
+					<label>
+						<input type="radio" name="optionsBackgrounds" id="optionsRadios2" value="option3">
+						Background 3
+					</label><br><br>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-10 col-sm-offset-2">
+					<input id="submit" name="submit" type="submit" value="Create letter" class="btn btn-default">
+				</div>
+			</div>
+
+		</form>
 	</div>
-
-	<form action="image.php" method="post" role="form">
-		<div class="form-group">
-			<label for="name" class="col-sm-2 control-label">Enter your owl:</label>
-			<div class="col-sm-10">
-				<textarea class="form-control" name="yourowl" rows="5" placeholder="Your letter should be in 200 words"></textarea><br />
-			</div>
-		</div>
-
-		<div class="form-group">
-			<label for="name" class="col-sm-2 control-label">Choose your owl:</label>
-			<div class="col-sm-10">
-				<label>
-					<input type="radio" name="optionsOwls" id="optionsRadios1" value="option1" checked>
-					Hedwig
-				</label><br>
-				<label>
-					<input type="radio" name="optionsOwls" id="optionsRadios2" value="option2">
-					Pigwidgeon
-				</label><br>
-				<label>
-					<input type="radio" name="optionsOwls" id="optionsRadios2" value="option3">
-					Hermes
-				</label><br>
-				<label>
-					<input type="radio" name="optionsOwls" id="optionsRadios2" value="option4">
-					Errol
-				</label><br><br>
-			</div>
-		</div>
-
-		<div class="form-group">
-			<label for="name" class="col-sm-2 control-label">Choose your background:</label>
-			<div class="col-sm-10">
-				<label>
-					<input type="radio" name="optionsBackgrounds" id="optionsRadios1" value="option1" checked>
-					Background 1
-				</label><br>
-				<label>
-					<input type="radio" name="optionsBackgrounds" id="optionsRadios2" value="option2">
-					Background 2
-				</label><br>
-				<label>
-					<input type="radio" name="optionsBackgrounds" id="optionsRadios2" value="option3">
-					Background 3
-				</label><br>
-			</div>
-		</div>
-
-		<div class="form-group">
-			<div class="col-sm-10 col-sm-offset-2">
-				<input id="submit" name="submit" type="submit" value="Create letter" class="btn btn-default">
-			</div>
-		</div>
-
-	</form>
 </body>
 </html>

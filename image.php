@@ -23,6 +23,7 @@
 	$result = str_replace(":", "", $result);
 	$result = str_replace(" ", "_", $result);
 	$path = "owls/" . generateRandomString(4) . "_" . $result . ".png";
+	chmod("owls/", 0755);
 
 	$bg = 'errol.png';
 	$image = new PHPImage();
