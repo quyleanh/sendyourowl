@@ -3,9 +3,6 @@
 <head>
 	<title>Your owl is here...</title>
 	<link rel="stylesheet" href="styles/styles.css">
-	<style>
-		
-	</style>
 </head>
 <body>
 	<?php
@@ -23,14 +20,14 @@
 	$result = str_replace(":", "", $result);
 	$result = str_replace(" ", "_", $result);
 	$path = "owls/" . generateRandomString(4) . "_" . $result . ".png";
-	chmod("owls/", 755);
 
 	$bg = 'errol.png';
 	$image = new PHPImage();
 	$image->setDimensionsFromImage($bg);
 	$image->draw($bg);
 
-	$image->setFont('HONEY-CREAM.ttf');
+	$fontPath = './HONEY-CREAM.ttf';
+	$image->setFont($fontPath);
 	$image->setTextColor(array(0, 0, 0));
 	$image->textBox($textLetter, array(
 		'width' => 630,
