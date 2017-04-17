@@ -30,7 +30,7 @@
 	$image->setDimensionsFromImage($bg);
 	$image->draw($bg);
 
-	$image->setFont('HONEY-CREAM.TTF');
+	$image->setFont('HONEY-CREAM.ttf');
 	$image->setTextColor(array(0, 0, 0));
 	$image->textBox($textLetter, array(
 		'width' => 630,
