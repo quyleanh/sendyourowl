@@ -105,7 +105,7 @@
 	$image->textBox($textLetter, array(
 		'width' => 630,
 		'height' => 470,
-		'fontSize' => 40, // Desired starting font size
+		'fontSize' => 72, // Desired starting font size
 		'x' => 200,
 		'y' => 420
 		));
