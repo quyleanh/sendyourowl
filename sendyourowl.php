@@ -1,5 +1,5 @@
-﻿<?php
-include_once 'common.php';
+<?php
+include 'common.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
