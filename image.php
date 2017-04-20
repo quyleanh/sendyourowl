@@ -111,7 +111,7 @@
 		));
 	$image->save($path, false, true);
 	?>
-	<div id="loadingbar-frame" class="fill">	
+	<div class="fill">	
 		<a href="<?php echo $path?>" download>
 			<img class="image" src="<?php echo $path?>" alt="#sendyourowl">
 		</a>

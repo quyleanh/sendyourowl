@@ -1,7 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<?php
+include_once 'common.php';
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>#sendyourowl</title>
+	<title><?php echo $lang['PAGE_TITLE']; ?></title>
 	<link rel="stylesheet" href="styles/styles.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Latest compiled and minified CSS -->
@@ -14,81 +17,83 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<script src="bootstrap-maxlength.min.js"></script>
+	<script src="highlight.pack.js"></script>
 	<style>
 		body {
 			width: 100%;
 			height:90%;
-
 		}
 	</style>
 </head>
 <body>
 	<div style="width: 77%; margin: auto;" class="container-fluid">
 		<div class="bg-3 text-center">
-			<h3><b>Học Viện Ma Thuật và Pháp Thuật Hogwarts Việt Nam</b></h3>
+			<h3><b><?php echo $lang['HEADER_TITLE_H3_TOP']; ?></b></h3>
 			<img src="images/logo.png" class="img-circle" width="30%" height="30%" alt="Bird">
-			<h3>#sendyourowl</h3>
+			<h3>#SendYourOwl</h3>
 		</div>
 
-		<form class="ajax-call" action="image.php" method="post" role="form">
+		<form class="ajax-call" id="testLoading" action="image.php" method="post" role="form">
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">Enter your owl:</label>
+				<label for="name" class="col-sm-2 control-label"><?php echo $lang['LB_ENTER_LETTER']; ?></label>
 				<div class="col-sm-10">
-					<textarea class="form-control" name="yourowl" rows="5" placeholder="Your letter should be in 200 characters" maxlength="200"></textarea><br />
+					<textarea class="form-control" name="yourowl" rows="5" placeholder="<?php echo $lang['PLACE_HOLDER']; ?>" maxlength="500"></textarea><br />
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">Choose your owl:</label>
+				<label for="name" class="col-sm-2 control-label"><?php echo $lang['LB_CHOOSE_OWL']; ?></label>
 				<div class="col-sm-10">
 					<label>
 						<input type="radio" name="optionsOwls" id="optionsRadios1" value="option1" checked>
-						Hedwig trắng muốt
+						<?php echo $lang['OWL_1']; ?>
 					</label><br>
 					<label>
 						<input type="radio" name="optionsOwls" id="optionsRadios2" value="option2">
-						Heo nhí loi choi
+						<?php echo $lang['OWL_2']; ?>
 					</label><br>
 					<label>
 						<input type="radio" name="optionsOwls" id="optionsRadios3" value="option3">
-						Errol hiền hậu
+						<?php echo $lang['OWL_3']; ?>
 					</label><br>
 					<label>
 						<input type="radio" name="optionsOwls" id="optionsRadios4" value="option4">
-						Hermes ngạo nghễ
+						<?php echo $lang['OWL_4']; ?>
 					</label><br><br>
 				</div>
 			</div>
 
 			<div class="form-group">
-				<label for="name" class="col-sm-2 control-label">Choose your background:</label>
+				<label for="name" class="col-sm-2 control-label"><?php echo $lang['LB_CHOOSE_BACKGROUND']; ?></label>
 				<div class="col-sm-10">
 					<label>
 						<input type="radio" name="optionsBackgrounds" id="optionsRadios1" value="option1" checked>
-						Lâu đài Hogwarts
+						<?php echo $lang['BG_1']; ?>
 					</label><br>
 					<label>
 						<input type="radio" name="optionsBackgrounds" id="optionsRadios2" value="option2">
-						Trang trại Hang Sóc
+						<?php echo $lang['BG_2']; ?>
 					</label><br>
 					<label>
 						<input type="radio" name="optionsBackgrounds" id="optionsRadios3" value="option3">
-						Privet Drive
+						<?php echo $lang['BG_3']; ?>
 					</label><br>
 					<label>
 						<input type="radio" name="optionsBackgrounds" id="optionsRadios4" value="option4">
-						Quidditch chiều hoàng hôn
+						<?php echo $lang['BG_4']; ?>
 					</label><br>
 					<label>
 						<input type="radio" name="optionsBackgrounds" id="optionsRadios5" value="option5">
-						Quidditch ngày đẹp trời
+						<?php echo $lang['BG_5']; ?>
 					</label><br><br>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<div class="col-sm-10 col-sm-offset-2">
-					<input id="submit" name="submit" type="submit" value="Create letter" class="btn btn-default">
+					<input id="submit" name="submit" type="submit" value="<?php echo $lang['BUTTON_CREATE']; ?>" class="btn btn-default">
 				</div>
 			</div>
 
