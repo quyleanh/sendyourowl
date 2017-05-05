@@ -23,11 +23,13 @@ $lang['OWL_3'] = 'Errol';
 $lang['OWL_4'] = 'Hermes';
 
 $lang['LB_CHOOSE_BACKGROUND'] = 'Choose your Owlery:';
-$lang['BG_1'] = 'Hogwarts Castle';
-$lang['BG_2'] = 'The Burrow';
-$lang['BG_3'] = 'Privet Drive';
-$lang['BG_4'] = 'Quidditch in the dusk';
-$lang['BG_5'] = 'Sunny Quidditch day';
+$lang['BG_1'] = 'Hogwarts at dawn';
+$lang['BG_2'] = "The Burrow's summer";
+$lang['BG_3'] = "Diagon Alley's fall";
+$lang['BG_4'] = "Hogsmeade's winter";
+$lang['BG_5'] = 'Nightfall on Privet Drive';
+$lang['BG_6'] = 'Quidditch pitch at dusk';
+$lang['BG_7'] = 'Quidditch pitch in the sun';
 
 $lang['BUTTON_CREATE'] = 'Send your owl';
 ?>

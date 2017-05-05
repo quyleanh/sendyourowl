@@ -60,7 +60,7 @@ class PHPImage {
 	 *
 	 * @var integer
 	 */
-	protected $quality = 9;
+	protected $quality = 100;
 
 	/**
 	 * Global font file
@@ -559,8 +559,6 @@ class PHPImage {
 			case IMAGETYPE_PNG:
 			header('Content-type: image/png');
 			imagepng($this->img, null, $this->quality);
-				// chmod($save,0755);
-				// imagepng($this->img,$save,0,NULL);
 			break;
 			default:
 			header('Content-type: image/jpeg');

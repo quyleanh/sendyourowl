@@ -28,6 +28,20 @@ include 'common.php';
 	</style>
 </head>
 <body>
+	<?php 
+	$text = "What are you doing?";
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$text = test_input($_POST["yourowl"]);
+	}
+
+	function test_input($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
+	?>
 	<div style="width: 77%; margin: auto;" class="container-fluid">
 		<div class="bg-3 text-center">
 			<h3><b><?php echo $lang['HEADER_TITLE_H3_TOP']; ?></b></h3>
@@ -87,6 +101,14 @@ include 'common.php';
 					<label>
 						<input type="radio" name="optionsBackgrounds" id="optionsRadios5" value="option5">
 						<?php echo $lang['BG_5']; ?>
+					</label><br>
+					<label>
+						<input type="radio" name="optionsBackgrounds" id="optionsRadios6" value="option6">
+						<?php echo $lang['BG_6']; ?>
+					</label><br>
+					<label>
+						<input type="radio" name="optionsBackgrounds" id="optionsRadios7" value="option7">
+						<?php echo $lang['BG_7']; ?>
 					</label><br><br>
 				</div>
 			</div>

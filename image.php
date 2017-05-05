@@ -30,7 +30,7 @@
 		imagedestroy($image_y);
 	}
 
-	function getOptions($owlOption = 'a', $bgOption = '1') {
+	function getOptions($owlOption = 'option1', $bgOption = 'option1') {
 		switch ($owlOption) {
 			case 'option1':
 				$owl = 'a';
@@ -64,20 +64,49 @@
 			case 'option5':
 				$bg = '5';
 				break;
-			default:
+			case 'option6':
 				$bg = '6';
+				break;
+			case 'option7':
+				$bg = '7';
+				break;		
+			default:
+				$bg = '1';
 				break;
 		}
 		return array ($owl, $bg);
 	}
 
-	?>
+	function getTextColor($owlOption = 'a') {
+		switch ($owlOption) {
+			case 'option1':
+				$textColor = array(57,31,0);
+				break;
+			case 'option2':
+				$textColor = array(66,38,5);
+				break;
+			case 'option3':
+				$textColor = array(29,6,4);
+				break;
+			case 'option4':
+				$textColor = array(92,41,0);
+				break;
+			
+			default:
+				$textColor = array(57,31,0);
+				break;
+		}
+		return $textColor;
+	}
 
-	<?php
 	date_default_timezone_set("Asia/Ho_Chi_Minh");
 	function generateRandomString($length = 10) {
 		return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
 	}
+	
+	?>
+
+	<?php
 	
 	include 'PHPImage.php';
 
@@ -87,13 +116,11 @@
 	$result = $datetime->format('Y-m-d H:i:s');
 	$result = str_replace(":", "", $result);
 	$result = str_replace(" ", "_", $result);
-	$path = "owls/" . generateRandomString(4) . "_" . $result . ".png";
+	$path = "owls/" . generateRandomString(4) . "_" . $result . ".jpg";
 
 	list($foreGround, $backGround) = getOptions($_POST["optionsOwls"], $_POST["optionsBackgrounds"]);
 	
-	// fg[number]_bg[number]
-	// Check the existent image
-	$letterImage = "images/" . $foreGround . $backGround . ".png";
+	$letterImage = "images/" . $foreGround . $backGround . ".jpg";
 
 	$image = new PHPImage();
 	$image->setDimensionsFromImage($letterImage);
@@ -101,7 +128,10 @@
 
 	$fontPath = './HONEY-CREAM.ttf';
 	$image->setFont($fontPath);
-	$image->setTextColor(array(0, 0, 0));
+
+	$textColor = getTextColor($_POST["optionsOwls"]);
+
+	$image->setTextColor($textColor);
 	$image->textBox($textLetter, array(
 		'fontSize' => 72, // Desired starting font size
 		'width' => 630,
@@ -111,6 +141,7 @@
 		));
 	$image->save($path, false, true);
 	?>
+
 	<div class="fill">	
 		<a href="<?php echo $path?>" download>
 			<img class="image" src="<?php echo $path?>" alt="#sendyourowl">

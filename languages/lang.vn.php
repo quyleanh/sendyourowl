@@ -17,17 +17,19 @@ $lang['LB_ENTER_LETTER'] = 'Nhập thư của bạn ở đây:';
 $lang['PLACE_HOLDER'] = 'Thư của bạn nên ít hơn 500 ký tự';
 
 $lang['LB_CHOOSE_OWL'] = 'Bạn chọn cú nào:';
-$lang['OWL_1'] = 'Hedwig trắng muốt';
-$lang['OWL_2'] = 'Heo nhí loi choi';
+$lang['OWL_1'] = 'Hedwig tử tế';
+$lang['OWL_2'] = 'Heo nhí loi choi (Heo-Vịt-Trời)';
 $lang['OWL_3'] = 'Errol hiền hậu';
 $lang['OWL_4'] = 'Hermes ngạo nghễ';
 
 $lang['LB_CHOOSE_BACKGROUND'] = 'Bạn gửi từ đâu:';
-$lang['BG_1'] = 'Lâu đài Hogwarts';
-$lang['BG_2'] = 'Trang trại Hang Sóc';
-$lang['BG_3'] = 'Đường Privet Drive';
-$lang['BG_4'] = 'Quidditch chiều hoàng hôn';
-$lang['BG_5'] = 'Quidditch ngày đẹp trời';
+$lang['BG_1'] = 'Bình minh Hogwarts';
+$lang['BG_2'] = 'Trang trại Hang Sóc mùa hè';
+$lang['BG_3'] = 'Hẻm Xéo mùa nhập học';
+$lang['BG_4'] = 'Làng Hosmeade mùa đông';
+$lang['BG_5'] = 'Đêm ở Privet Drive';
+$lang['BG_6'] = 'Sân Quidditch chiều êm ả';
+$lang['BG_7'] = 'Sân Quidditch ngày nắng';
 
 $lang['BUTTON_CREATE'] = 'Gửi cú đi';
 ?>
