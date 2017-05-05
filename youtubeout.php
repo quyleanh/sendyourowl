@@ -76,11 +76,13 @@ while(isset($json['nextPageToken'])){
 	foreach($json['items'] as $video)
 		$videos[] = $video['snippet']['resourceId']['videoId'];
 }
-		//print_r($videos);
+
+$array1 = array();
+
 foreach ($videos as $video_id) {
 	//echo get_youtube_title($video_id) . "\n" . "------" . get_youtube_view($video_id) . "\n";
 
-	outputCSV(array(get_youtube_title($video_id),get_youtube_view($video_id)));
+	array_push($array1, array(get_youtube_title($video_id),get_youtube_view($video_id))) ;
 }
 
 ?>
@@ -92,5 +94,7 @@ function outputCSV($data) {
     fputcsv($output, $row); // here you can change delimiter/enclosure
 	fclose($output);
 }
+
+outputCSV($array1);
 
 ?>
