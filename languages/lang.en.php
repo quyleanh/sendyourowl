@@ -22,7 +22,7 @@ $lang['OWL_2'] = 'Pigwidgeon';
 $lang['OWL_3'] = 'Errol';
 $lang['OWL_4'] = 'Hermes';
 
-$lang['LB_CHOOSE_BACKGROUND'] = 'Choose your Owlery:';
+$lang['LB_CHOOSE_BACKGROUND'] = 'Choose your background:';
 $lang['BG_1'] = 'Hogwarts at dawn';
 $lang['BG_2'] = "The Burrow's summer";
 $lang['BG_3'] = "Diagon Alley's fall";

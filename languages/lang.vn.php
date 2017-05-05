@@ -22,7 +22,7 @@ $lang['OWL_2'] = 'Heo nhí loi choi (Heo-Vịt-Trời)';
 $lang['OWL_3'] = 'Errol hiền hậu';
 $lang['OWL_4'] = 'Hermes ngạo nghễ';
 
-$lang['LB_CHOOSE_BACKGROUND'] = 'Bạn gửi từ đâu:';
+$lang['LB_CHOOSE_BACKGROUND'] = 'Khung cảnh gửi cú:';
 $lang['BG_1'] = 'Bình minh Hogwarts';
 $lang['BG_2'] = 'Trang trại Hang Sóc mùa hè';
 $lang['BG_3'] = 'Hẻm Xéo mùa nhập học';
