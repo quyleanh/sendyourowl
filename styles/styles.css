@@ -12,7 +12,7 @@
   width:80px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 .image-center img {
   width: 80px;
   top:67%;

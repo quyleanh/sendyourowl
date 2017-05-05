@@ -42,7 +42,7 @@ include 'common.php';
 		return $data;
 	}
 	?>
-	<div style="width: 77%; margin: auto;" class="container-fluid">
+	<div style="width: 90%; margin: auto;" class="container-fluid">
 		<div class="bg-3 text-center">
 			<h3><b><?php echo $lang['HEADER_TITLE_H3_TOP']; ?></b></h3>
 			<img src="images/logo.png" class="img-circle" width="30%" height="30%" alt="Bird">
