@@ -31,6 +31,13 @@
 				return $channel_id;
 			}	
 		}
+
+		function get_youtube_view($video_id) {
+			$html = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=' . $video_id . '={YOUR-API-KEY}';
+			$JSON = file_get_contents($html);
+			$json_data = json_decode($JSON, true);
+			echo $json_data['items'][0]['statistics']['viewCount'];
+		}
 		//echo $title = get_youtube_title('BV06Sp2J82s');
 
 		//echo $channel_id = get_youtube_id('magicofmessi');
@@ -41,7 +48,7 @@
     	// https://developers.google.com/youtube/v3/getting-started
 		$apiKey = 'AIzaSyBm-RS6DPknbNh1xtGqs0n4bkBlxyRMDpM';
     	// If you don't know the channel ID see below
-		$channelId = 'UCw8ZhLPdQ0u_Y-TLKd61hGA';
+		$channelId = get_youtube_id('popskids');
 
 		$params = [
 		'id'=> $channelId,
@@ -74,7 +81,7 @@
 		}
 		//print_r($videos);
 		foreach ($videos as $video_id) {
-			echo get_youtube_title($video_id) . "\n";
+			echo get_youtube_title($video_id) . "\n" . "------" . get_youtube_view($video_id);
 		}
 		?>
 	</pre>
