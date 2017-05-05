@@ -33,7 +33,8 @@
 		}
 
 		function get_youtube_view($video_id) {
-			$html = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=' . $video_id . '={YOUR-API-KEY}';
+			$html = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=' . $video_id . '&key=AIzaSyBm-RS6DPknbNh1xtGqs0n4bkBlxyRMDpM';
+			//$JSON = file_get_contents("https://www.googleapis.com/youtube/v3/videos?part=statistics&id=hqepb5hzuB0&key={YOUR-API-KEY}");
 			$JSON = file_get_contents($html);
 			$json_data = json_decode($JSON, true);
 			//return $json_data['items'][0]['statistics']['viewCount'];
