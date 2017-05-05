@@ -86,7 +86,7 @@
 		}
 		//print_r($videos);
 		foreach ($videos as $video_id) {
-			echo get_youtube_title($video_id) . "\n" . "------" . get_youtube_view($video_id);
+			echo get_youtube_title($video_id) . "\n" . "------" . get_youtube_view($video_id) . "\n";
 		}
 		?>
 	</pre>
