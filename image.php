@@ -7,7 +7,6 @@
 	<meta property="og:type"               content="article" />
 	<meta property="og:title"              content="SendYourOwl - Hogwarts.vn" />
 	<meta property="og:description"        content="Tạo và chia sẻ thư cú của bạn ngay để nhận ngay thư nhập học hoặc phần quà lưu niệm nhé bồ tèo!" />
-	<meta property="og:image"              content="https://hogwarts.vn/SendYourOwl/20Yrs.png" />
 
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
