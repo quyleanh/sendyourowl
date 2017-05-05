@@ -36,7 +36,11 @@
 			$html = 'https://www.googleapis.com/youtube/v3/videos?part=statistics&id=' . $video_id . '={YOUR-API-KEY}';
 			$JSON = file_get_contents($html);
 			$json_data = json_decode($JSON, true);
-			echo $json_data['items'][0]['statistics']['viewCount'];
+			return $json_data['items'][0]['statistics']['viewCount'];
+			// foreach ($json_data[items] as $items) {
+			// 	$view_count = $items['viewCount'];
+			// 	return $view_count;
+			// }
 		}
 		//echo $title = get_youtube_title('BV06Sp2J82s');
 
