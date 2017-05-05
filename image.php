@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
 	<title>Your owl is here...</title>
+
+	<meta property="og:url"                content="https://hogwarts.vn/SendYourOwl" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="SendYourOwl - Hogwarts.vn" />
+	<meta property="og:description"        content="Tạo và chia sẻ thư cú của bạn ngay để nhận ngay thư nhập học hoặc phần quà lưu niệm nhé bồ tèo!" />
+	<meta property="og:image"              content="https://hogwarts.vn/SendYourOwl/20Yrs.png" />
+
 	<link rel="stylesheet" href="styles/styles.css">
-	<style>
-		
-	</style>
 </head>
 <body>
 	<?php 
@@ -33,46 +37,46 @@
 	function getOptions($owlOption = 'option1', $bgOption = 'option1') {
 		switch ($owlOption) {
 			case 'option1':
-				$owl = 'a';
-				break;
+			$owl = 'a';
+			break;
 			case 'option2':
-				$owl = 'b';
-				break;
+			$owl = 'b';
+			break;
 			case 'option3':
-				$owl = 'c';
-				break;
+			$owl = 'c';
+			break;
 			case 'option4':
-				$owl = 'd';
-				break;
+			$owl = 'd';
+			break;
 			default:
-				$owl = 'a';
+			$owl = 'a';
 			break;
 		}
 		switch ($bgOption) {
 			case 'option1':
-				$bg = '1';
-				break;
+			$bg = '1';
+			break;
 			case 'option2':
-				$bg = '2';
-				break;
+			$bg = '2';
+			break;
 			case 'option3':
-				$bg = '3';
-				break;
+			$bg = '3';
+			break;
 			case 'option4':
-				$bg = '4';
-				break;				
+			$bg = '4';
+			break;				
 			case 'option5':
-				$bg = '5';
-				break;
+			$bg = '5';
+			break;
 			case 'option6':
-				$bg = '6';
-				break;
+			$bg = '6';
+			break;
 			case 'option7':
-				$bg = '7';
-				break;		
+			$bg = '7';
+			break;		
 			default:
-				$bg = '1';
-				break;
+			$bg = '1';
+			break;
 		}
 		return array ($owl, $bg);
 	}
@@ -80,21 +84,21 @@
 	function getTextColor($owlOption = 'a') {
 		switch ($owlOption) {
 			case 'option1':
-				$textColor = array(57,31,0);
-				break;
+			$textColor = array(57,31,0);
+			break;
 			case 'option2':
-				$textColor = array(66,38,5);
-				break;
+			$textColor = array(66,38,5);
+			break;
 			case 'option3':
-				$textColor = array(29,6,4);
-				break;
+			$textColor = array(29,6,4);
+			break;
 			case 'option4':
-				$textColor = array(92,41,0);
-				break;
+			$textColor = array(92,41,0);
+			break;
 			
 			default:
-				$textColor = array(57,31,0);
-				break;
+			$textColor = array(57,31,0);
+			break;
 		}
 		return $textColor;
 	}
