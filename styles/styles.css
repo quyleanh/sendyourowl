@@ -1,13 +1,30 @@
 /*CSS for index.html*/
-.imageCenter {
-  position        : absolute;
-  left            : 0;
-  top             : 90%;
-  width           : 100%;
-  text-align      : center;
-  font-size       : 18px;
+.imageCenter img {
+  position: absolute;
+  left: 51%;
+  top: 67%;
+}
+.image-top-right {
+  text-align:right;
+  padding:20px;
+}
+.image-top-right img {
+  width:80px;
 }
 
+@media only screen and (max-width: 500px) {
+.imageCenter img {
+  width: 80px;
+  top:67%;
+  left:40%;
+} 
+.image-top-right img {
+  width:50px;
+}
+.image-top-right {
+  padding:10px;
+}
+}
 
 /*CSS for sendyourowl.php*/
 .textareaCenter {

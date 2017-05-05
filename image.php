@@ -71,27 +71,6 @@
 		return array ($owl, $bg);
 	}
 
-	function getTextColor($owlOption = 'a') {
-		switch ($owlOption) {
-			case 'option1':
-				$textColor = array(73,46,7);
-				break;
-			case 'option2':
-				$textColor = array(111,75,22);
-				break;
-			case 'option3':
-				$textColor = array(0,0,0);
-				break;
-			case 'option4':
-				$textColor = array(96,64,18);
-				break;
-			default:
-				$textColor = array(0,0,0);
-				break;
-		}
-		return $textColor;
-	}
-
 	?>
 
 	<?php
@@ -122,11 +101,11 @@
 
 	$fontPath = './HONEY-CREAM.ttf';
 	$image->setFont($fontPath);
-	$image->setTextColor(getTextColor($_POST["optionsOwls"]));
+	$image->setTextColor(array(0, 0, 0));
 	$image->textBox($textLetter, array(
+		'fontSize' => 72, // Desired starting font size
 		'width' => 630,
 		'height' => 470,
-		'fontSize' => 72, // Desired starting font size
 		'x' => 200,
 		'y' => 420
 		));

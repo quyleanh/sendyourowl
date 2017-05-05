@@ -39,7 +39,7 @@ include 'common.php';
 			<div class="form-group">
 				<label for="name" class="col-sm-2 control-label"><?php echo $lang['LB_ENTER_LETTER']; ?></label>
 				<div class="col-sm-10">
-					<textarea class="form-control" name="yourowl" rows="5" placeholder="<?php echo $lang['PLACE_HOLDER']; ?>" maxlength="500"></textarea><br />
+					<textarea class="form-control" name="yourowl" rows="5" placeholder="<?php echo $lang['PLACE_HOLDER']; ?>" maxlength="500" minlength="20"></textarea><br />
 				</div>
 			</div>
 

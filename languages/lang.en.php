@@ -22,12 +22,12 @@ $lang['OWL_2'] = 'Pigwidgeon';
 $lang['OWL_3'] = 'Errol';
 $lang['OWL_4'] = 'Hermes';
 
-$lang['LB_CHOOSE_BACKGROUND'] = 'Choose your background:';
+$lang['LB_CHOOSE_BACKGROUND'] = 'Choose your Owlery:';
 $lang['BG_1'] = 'Hogwarts Castle';
 $lang['BG_2'] = 'The Burrow';
 $lang['BG_3'] = 'Privet Drive';
-$lang['BG_4'] = 'Quidditch 1';
-$lang['BG_5'] = 'Quidditch 2';
+$lang['BG_4'] = 'Quidditch in the dusk';
+$lang['BG_5'] = 'Sunny Quidditch day';
 
-$lang['BUTTON_CREATE'] = 'Create letter';
+$lang['BUTTON_CREATE'] = 'Send your owl';
 ?>

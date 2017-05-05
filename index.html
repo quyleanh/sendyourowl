@@ -3,35 +3,60 @@
 <head>
   <title>#sendyourowl</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+
   <style type="text/css">
     body {
-      background: url('images/background.jpg') no-repeat center center fixed;
+      background-image: url('images/HomeSendYourOwl_portrait.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
-      background-size: auto 100%;
+      background-size: cover;
       -o-background-size: cover;
+    }
+
+    @media only screen and (min-width: 500px) {
+      body { 
+        background-image: url('images/HomeSendYourOwl_landscape.jpg'); 
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        height:100%;
+      }
     }
   </style>
 </head>
 <body>
-<!-- HeadSectionDl BEGIN -->
-<div id="languages">
-<a href="sendyourowl.php?lang=en"><img src="images/en.png" /></a>
-<a href="sendyourowl.php?lang=vn"><img src="images/vn.png" /></a>
-</div>
-<div class="imageCenter">
-  <a class="btn btn-default btn-lg" role="button" href="sendyourowl.php">Send your owl!</a>
-</div>
+  <div class="image-top-right">
+    <a href="sendyourowl.php?lang=en"><img src="images/en.png" /></a>
+    <a href="sendyourowl.php?lang=vn"><img src="images/vn.png" /></a><br><br><br>
+  </div>
+  <div class="imageCenter">
+    <!-- <a class="btn btn-default btn-lg" role="button" href="sendyourowl.php">Prepare your owl!</a> -->
+    <a href="sendyourowl.php"><img width="104" src="images/SendYourOwlButton.png" /></a>
+  </div>
+  <script>
+    $('.selectpicker').selectpicker({
+      style: 'btn-info',
+      size: 4
+    });
 
+  </script>
 </body>
 </html>
