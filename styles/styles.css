@@ -12,6 +12,12 @@
   width:80px;
 }
 
+.image-bottom-right {
+  position: absolute;
+  right: 10px;
+  bottom:10px;
+}
+
 @media only screen and (max-width: 600px) {
 .image-center img {
   width: 80px;
